@@ -6,36 +6,41 @@
   justify-content: space-around;
   align-items: center;
   border: var(--borda);
-  background-color: var(--cor-header-background);
 }
 
 .header-menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+
   justify-content: center;
 }
 
-.header-menu a {
-  display: block;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  padding: 10px 20px;
+.menu-item {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   text-decoration: none;
-  color: #141414;
+  color: var(--texto);
+  font-size: var(--font-size);
+  font-weight: bold;
   border-radius: 4px;
-  background-color: var(--cor-fundo-menu);
-  border: var(--borda);
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.header-menu a:hover {
-  color: var(--texto-hover);
-  background-color: rgb(78, 76, 76);
-  transition: background-color 0.5s;
-  border-left: var(--borda-detalhe);
-  border-right: var(--borda-detalhe);
-  border-radius: 4px;
+.menu-img {
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
 }
+.header-menu a {
+  display: flex;
+}
+
+
 
 .creator-name {
   border-radius: 4px;
@@ -103,4 +108,76 @@
     background: #f5f5f5;
     border-radius: 4px;
   }
+}
+
+/* Button */
+/* Button */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Animação */
+.button-86::after,
+.button-86::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.3s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #85848415;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 12px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }
