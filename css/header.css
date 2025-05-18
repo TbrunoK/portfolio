@@ -1,11 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.creator-name::after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 3px;
+
+  background-color: #000000;
+  transition: 0.3s;
+  position: relative;
+}
+
+.creator-name:hover::after {
+  width: 100%;
+}
+
 .header {
-  max-width: 99999px;
+  max-width: 920px;
   padding: 40px 20px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: var(--borda);
+  /* border: var(--borda); */
 }
 
 .header-menu {
@@ -40,17 +61,6 @@
   display: flex;
 }
 
-
-
-.creator-name {
-  border-radius: 4px;
-}
-
-.creator-name:hover {
-  border-left: var(--borda-detalhe);
-  border-right: var(--borda-detalhe);
-}
-
 .github-logo {
   content: "";
   background-image: url(../img/github-mark-white2.png);
@@ -58,12 +68,8 @@
   margin-left: 13rem;
   margin-top: -2.5rem;
   width: 40px;
-}
-
-.github-logo:hover {
-  border-left: var(--borda-detalhe);
-  border-right: var(--borda-detalhe);
-  border-radius: 22px;
+  background-color: #000;
+  border-radius: 50%;
 }
 
 /* Icon - menu header */
@@ -94,10 +100,7 @@
   margin-top: -1.25rem;
 }
 
-/*.header-menu a:hover {
-  border: 1px solid black;
-}
-*/
+/* @media */
 @media (max-width: 800px) {
   .header {
     flex-direction: column;
@@ -110,7 +113,6 @@
   }
 }
 
-/* Button */
 /* Button */
 .button-86 {
   all: unset;
