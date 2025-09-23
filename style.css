@@ -1,0 +1,32 @@
+/* style.css */
+:root {
+  --bg: #05060a;
+  --panel: rgba(255, 255, 255, 0.03);
+  --neon: #00f0ff;
+  --accent: #7b61ff;
+  --text: #e6eef8;
+  --shadow: rgba(123, 97, 255, 0.12);
+}
+
+/* alt mode
+html.altMode {
+  --bg: ;
+  --panel: ;
+  --neon: ;
+  --accent: ;
+  --text: ;
+  --shadow: ;
+} */
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--fw);
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.6s ease-in-out;
+}
